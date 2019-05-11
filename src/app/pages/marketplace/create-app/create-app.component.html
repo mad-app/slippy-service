@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-lg-9">
+        <nb-card>
+            <nb-card-header>Application</nb-card-header>
+            <nb-card-body>
+                <div class="input-group">
+                    <input type="text" nbInput fullWidth shape="rectangle" placeholder="{{lang.new.name}}" [(ngModel)]="appName">
+                </div>
+                <div class="input-group">
+                    <textarea  rows="5" nbInput fullWidth shape="semi-round" placeholder="{{lang.new.desc}}" [(ngModel)]="appDesc"></textarea>
+                </div>
+                <div class="input-group">
+                    <input id="dropzone" type="file" webkitdirectory>
+                </div>
+                <div class="input-group">
+                    <button nbButton shape="round" size="small" status="success" (click)="saveZip()">{{lang.new.save}}</button>
+                </div>
+            </nb-card-body>
+        </nb-card>
+    </div>
+</div>

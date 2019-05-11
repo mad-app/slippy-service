@@ -1,0 +1,15 @@
+<div>
+  appName : {{appName}}
+</div>
+<div>
+  <div>
+    <label for="agent-count" class="col-lg-2">Agent Count:</label>
+    <input id="agnet-count" class="col-lg-3" type="number" [(ngModel)]="agentCount" nbInput placeholder="Agent Count">
+    <button nbButton shape="round" size="small" status="success" (click)="createAgent()">Create</button>
+  </div>
+  <div>
+    <label for="topic" class="col-lg-2">Topic:</label>
+    <input id="topic" class="col-lg-3" type="text" [(ngModel)]="topic" nbInput placeholder="Topic">
+    <button nbButton shape="round" size="small" status="success" (click)="runTestCode()">Run</button>
+  </div>
+</div>

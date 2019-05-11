@@ -1,0 +1,13 @@
+{
+  "host":"http://localhost:8000",
+  "api":{
+    "v1":{
+      "testing": {
+        "quick": "/rest/v1/testing/quick"
+      },
+      "marketplace": {
+        "create": "rest/v1/marketplace/create"
+      }
+    }
+  }
+}

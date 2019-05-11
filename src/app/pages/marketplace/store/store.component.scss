@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+mat-card {
+    width: 96%;
+    margin-bottom: 2%;
+}
+
+nb-card-footer.app-card-footer {
+    text-align: right;
+    padding:2px;
+}
+
+nb-card.app-card {
+    width: 30%;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 3%;
+}
+
+nb-card-body.created-at {
+  color:gray;
+  font-style: italic;
+}
+
+nb-card-footer > button {
+    margin-right: 10px;
+}
+
+::ng-deep snack-bar-container.custom-class {
+    background: black;
+  }
+  
+  ::ng-deep .custom-class .mat-simple-snackbar {
+    color: white;
+  }

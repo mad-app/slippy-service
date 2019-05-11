@@ -1,0 +1,30 @@
+nb-card-body {
+    overflow: visible;
+}
+
+.input-group {
+    margin-bottom: 1rem;
+}
+
+.dropzone-container {
+    width: 100%;
+}
+
+.dropzone-drop-area {
+    border: dashed 3px grey;
+    width: 100%;
+    min-height: 120px;
+    box-sizing: border-box;
+    padding: 6px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    cursor: pointer;
+    position: relative;
+    &:hover {
+        color: darkorange;
+        border-color: darkorange;
+    }
+}

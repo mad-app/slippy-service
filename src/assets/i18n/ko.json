@@ -1,0 +1,22 @@
+{
+    "menu":{
+        "dashboard":"대시보드",
+        "testing":"성능테스트",
+        "marketplace":{
+            "v":"마켓플레이스",
+            "submenu":{
+                "new":"앱 만들기",
+                "my_app":"나의 앱",
+                "store":"앱 스토어"
+            }
+        }
+    },
+    "marketplace": {
+        "new": {
+            "name": "성능테스트명",
+            "desc":"설명",
+            "save":"저장하기",
+            "appSampleCode": "console.log(\"Hello World!\");"
+        }
+    }
+}

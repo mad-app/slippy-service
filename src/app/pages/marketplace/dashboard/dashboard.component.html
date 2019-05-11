@@ -1,0 +1,22 @@
+<div>
+    <div class="row">
+        <mat-card>
+            <mat-card-title>
+                My APP
+            </mat-card-title>
+        </mat-card>
+        <nb-card status="success" *ngFor="let app of apps | async" class="app-card">
+            <nb-card-header>{{ app.name }}</nb-card-header>
+            <nb-card-body>
+                <h6>Description : </h6> {{ app.desc.content }}
+                <br><br>
+                By {{ app.creator }} <small class="created-at">{{ app.createAt }}</small>
+                <br>
+                Bought at {{ app.PurchaseInfo.boughtAt}}
+            </nb-card-body>
+            <nb-card-footer class="app-card-footer">
+                <button nbButton shape="round" size="small" status="success" (click)="onLoadApp(app)">Run</button>
+            </nb-card-footer>
+        </nb-card>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+.base-test-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.basic-test-container > * {
+    width: 100%;
+}
+
+h1 {
+    line-height: 200%;
+}
+
+body {
+    background-color: #fcfcfc;
+}
+
+.container {
+    width: 100%;
+    min-width: 960px;
+}

@@ -1,0 +1,128 @@
+<div>
+    <mat-card>
+        <mat-card-title> Basic test</mat-card-title>
+        <mat-card-content>
+            <form class="basic-test-container" [formGroup]="options">
+                <mat-form-field>
+                    <input matInput placeholder="URL" formControlName="url">
+                </mat-form-field>
+                <mat-form-field [color]="options.value.color">
+                    <input matInput type="number" placeholder="Arrival rate" formControlName="arrivalRate" min="10">
+                    <mat-error *ngIf="options.get('arrivalRate')?.invalid">Min rate: 10</mat-error>
+                </mat-form-field>
+
+                <mat-form-field [color]="options.value.color">
+                    <input matInput type="number" placeholder="Duration" formControlName="duration" min="10">
+                    <mat-error *ngIf="options.get('duration')?.invalid">Duration: 10</mat-error>
+                </mat-form-field>
+
+                <!-- <mat-form-field [color]="options.value.color"> -->
+                    <!--     <input matInput type="number" placeholder="Count" formControlName="count" min="100"> -->
+                    <!--     <mat-error *ngIf="options.get('count')?.invalid">Min count: 100</mat-error> -->
+                    <!-- </mat-form-field> -->
+            </form>
+            <button mat-raised-button color="primary" (click)="runTesting()">Run tests</button>
+        </mat-card-content>
+    </mat-card>
+    <div  class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="text-center" id="page-title">Test run on <span id="timestamp">date</span></h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3">
+                <p><strong>Summary</strong></p>
+                <table class="table table-bordered table-hover table-condensed">
+                    <tbody>
+                        <tr>
+                            <td>Test duration</td>
+                            <td><span id="testDuration"></span> sec</td>
+                        </tr>
+                        <tr>
+                            <td>Scenarios created</td>
+                            <td><span id="scenariosCreated"></span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Scenarios completed</td>
+                            <td><span id="scenariosCompleted"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-lg-5" id="scenarioCountsContainer">
+                <div>
+                    <strong>Scenario counts:</strong>
+
+                    <p></p>
+
+                    <table class="table table-bordered table-hover table-condensed" id="scenarioCounts">
+                    </table>
+                </div>
+            </div>
+
+            <div class="col-lg-1">
+                <div id="codesContainer">
+                    <strong>Codes</strong>
+
+                    <p></p>
+
+                    <table class="table table-bordered table-hover table-condensed" id="codes">
+                    </table>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div id="errorsContainer">
+                    <strong>Errors</strong>
+
+                    <p></p>
+
+                    <table class="table table-bordered table-hover table-condensed" id="errors">
+                    </table>
+                </div>
+            </div>
+        </div> <!-- /.row -->
+
+        <div class="row">
+            <div class="text-center col-lg-12">
+                <h2>Charts</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="latency-histogram text-center col-lg-12"></div>
+        </div>
+
+        <div class="row">
+            <div class="latency text-center col-lg-12"></div>
+        </div>
+
+        <div class="latency-legend"></div>
+
+        <div class="row">
+
+        </div>
+
+        <div class="row">
+            <div class="concurrency text-center col-lg-12"></div>
+        </div>
+
+        <div class="row">
+            <div class="rps-mean text-center col-lg-12"></div>
+        </div>
+        <div class="row">
+            <div class="rps-count text-center col-lg-12"></div>
+        </div>
+
+        <div class="row">
+            <div class="codes-line text-center col-lg-12"></div>
+        </div>
+        <div class="row">
+            <div class="errors-line text-center col-lg-12"></div>
+        </div>
+    </div>
+</div>
